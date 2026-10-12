@@ -1,0 +1,3 @@
+import { ArrowRight, Box, ScanSearch, FileCheck2 } from 'lucide-react';
+const steps = [[Box, '01', 'Select a package', 'Choose a supported package in the browser.'], [ScanSearch, '02', 'View demo status', 'Follow the simulated scan status flow.'], [FileCheck2, '03', 'Review sample findings', 'Browse illustrative development data.']] as const;
+export default function WorkflowGuide() { return <div className="workflow">{steps.map(([Icon, number, title, copy], index) => <div className="workflow-step" key={number}><span className="workflow-icon"><Icon size={18}/></span><div><small>STEP {number}</small><b>{title}</b><p>{copy}</p></div>{index < 2 && <ArrowRight className="step-arrow" size={16}/>}</div>)}</div>; }

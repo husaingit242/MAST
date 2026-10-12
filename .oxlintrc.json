@@ -1,0 +1,1 @@
+{"$schema":"https://oxc.rs/schema/oxlintrc.json","plugins":["typescript","react"]}
